@@ -1,0 +1,13 @@
+/* Responsive  */
+
+/* Mobile 739px */
+@media (min-width: 46.1875em) {
+}
+
+/* Tablet 740px - 1023px */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+}
+
+/* Mobile and tablet <= 1023px  */
+@media (max-width: 63.9375em) {
+}

@@ -1,0 +1,45 @@
+/* CSS những thành phần dùng chung */
+
+* {
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+:root {
+    --primary-color: #ee4d2d;
+    --primary-bg: #fef6f5;
+    --primary-gradient: linear-gradient(#ee4d2d, #ff7337);
+    --width-container: 1200px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: Montserrat, sans-serif;
+}
+
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+}
+
+.line-number {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.line-clamp-1 {
+    --line-clamp: 1;
+}
+
+.line-clamp-3 {
+    --line-clamp: 1;
+}
