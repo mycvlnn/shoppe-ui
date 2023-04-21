@@ -6,10 +6,18 @@
 }
 
 :root {
+    --text-color: #333;
     --primary-color: #ee4d2d;
+    --hover-button-color: #fb6445;
     --primary-bg: #fef6f5;
+    --bg-color-notify: #fff2ee;
+    --bg-hover-notify: #f8f8f8;
     --primary-gradient: linear-gradient(#ee4d2d, #ff7337);
     --width-container: 1200px;
+    --height-header: 119px;
+    --height-navbar: 34px;
+    --main-height-header: calc(var(--height-header) - var(--height-navbar));
+    --gap-mobile: 20px;
 }
 
 html {
@@ -42,4 +50,77 @@ button {
 
 .line-clamp-3 {
     --line-clamp: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltip__content {
+    display: none;
+}
+
+.tooltip:hover .tooltip__content {
+    display: block;
+}
+
+.tooltip__content {
+    z-index: 2;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.09);
+    background-color: var(--color-tooltip);
+    animation: zoomInAnimate linear 0.25s;
+    transform-origin: 85% top;
+}
+
+.tooltip__content::before {
+    content: "";
+    display: inline-block;
+    border-bottom: 10px solid var(--color-tooltip);
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    position: absolute;
+    top: -10px;
+    right: 44px;
+    z-index: 1;
+}
+
+@keyframes zoomInAnimate {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 90px;
+    padding: 0 15px;
+    line-height: 34px;
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--primary-color);
+    font-size: 1.4rem;
+    user-select: none;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    white-space: nowrap;
+    border-radius: 2px;
 }
