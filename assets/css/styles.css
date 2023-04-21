@@ -427,6 +427,139 @@
     padding-top: 16px;
 }
 
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu__btn {
+    background: transparent;
+    cursor: pointer;
+    color: #fff;
+    font-size: 3.2rem;
+    margin-right: 28px;
+    border: none;
+    margin-top: 2px;
+    padding: 6px 12px;
+    display: flex;
+}
+
+/* Side bar */
+
+.sidebar__overlay {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: overlay linear 0.3s;
+}
+
+@keyframes overlay {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#mobile-menu-input:checked ~ .sidebar .sidebar__overlay {
+    display: block;
+}
+
+.sidebar__container {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    width: 300px;
+    max-width: 100%;
+    transform: translateX(-100%);
+    transition: 0.3s;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#mobile-menu-input:checked ~ .sidebar .sidebar__container {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.sidebar__header {
+    padding: 24px 0;
+    margin: 0 28px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sidebar__close {
+    position: absolute;
+    right: 28px;
+    top: 12px;
+    background-color: transparent;
+    border: unset;
+    font-size: 3.4rem;
+}
+
+.sidebar__profile {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar__profile-avatar {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+
+.sidebar__profile-content {
+    padding-left: 20px;
+    flex: 1;
+}
+
+.sidebar__profile-name {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.sidebar__profile-email {
+    font-size: 1.6rem;
+    margin-top: 6px;
+    color: #888;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.sidebar__body {
+    margin-top: 30px;
+    overflow-y: auto;
+    padding-bottom: 30px;
+}
+
+.sidebar__item {
+}
+
+.sidebar__item-link {
+    padding: 16px 28px;
+    display: flex;
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.sidebar__item-icon {
+    margin-right: 20px;
+}
+
 .header-brand {
     margin-right: 40px;
 }
@@ -627,6 +760,21 @@
     font-weight: 300;
 }
 
+/* Mobile search */
+.mobile-search {
+    display: none;
+}
+
+.mobile-search__btn {
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-size: 2.8rem;
+    cursor: pointer;
+    display: flex;
+    padding: 8px 12px;
+}
+
 /* Cart */
 .header-cart {
     width: 138px;
@@ -641,6 +789,7 @@
     padding: 6px 12px;
     color: #fff;
     position: relative;
+    display: flex;
 }
 
 .header-cart__quantity {
@@ -740,6 +889,7 @@
     margin-top: 8px;
     font-size: 1.3rem;
     color: #888;
+    line-height: 1.4;
 }
 
 .cart-item__price {

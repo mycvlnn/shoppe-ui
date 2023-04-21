@@ -67,7 +67,8 @@
             <!-- ====================== Header ====================== -->
             <header id="header">
                 <div class="grid wide">
-                    <nav class="navbar">
+                    <!-- Navbar -->
+                    <nav class="navbar hide-mobile-tablet">
                         <!-- Navbar list left -->
                         <ul class="navbar__list">
                             <li class="navbar__item">
@@ -358,7 +359,113 @@
                     </nav>
                     <!-- Main header  -->
                     <div class="main-header">
-                        <a href="#" class="header-brand">
+                        <!-- Mobile menu -->
+                        <div class="mobile-menu">
+                            <label for="mobile-menu-input" class="mobile-menu__btn">
+                                <i class="bx bx-menu"></i>
+                            </label>
+                            <!-- Sidebar mobile menu -->
+                            <input type="checkbox" hidden id="mobile-menu-input" />
+                            <aside class="sidebar">
+                                <label for="mobile-menu-input" class="sidebar__overlay"></label>
+                                <section class="sidebar__container">
+                                    <div class="sidebar__header">
+                                        <label for="mobile-menu-input" class="sidebar__close">
+                                            <i class="bx bx-x"></i>
+                                        </label>
+                                        <a href="#!" class="sidebar__profile">
+                                            <img
+                                                src="./assets/img/avatar.jpeg"
+                                                alt=""
+                                                class="sidebar__profile-avatar"
+                                            />
+                                            <div class="sidebar__profile-content">
+                                                <h3 class="sidebar__profile-name">Lê Ngoại Ngữ</h3>
+                                                <p
+                                                    class="sidebar__profile-email line-clamp-1 line-number"
+                                                >
+                                                    lengoaingu@gmail.com.vn.xyz
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sidebar__body">
+                                        <ul class="sidebar__list">
+                                            <li class="sidebar__item">
+                                                <a href="#!" class="sidebar__item-link">
+                                                    <i class="bx bx-bell sidebar__item-icon"></i>
+                                                    <span class="sidebar__item-label">
+                                                        Notification
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar__item">
+                                                <a href="#!" class="sidebar__item-link">
+                                                    <i class="bx bx-store sidebar__item-icon"></i>
+                                                    <span class="sidebar__item-label">
+                                                        Seller center
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar__item">
+                                                <a href="#!" class="sidebar__item-link">
+                                                    <i
+                                                        class="bx bx-store-alt sidebar__item-icon"
+                                                    ></i>
+                                                    <span class="sidebar__item-label">
+                                                        Start selling
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar__item">
+                                                <a href="#!" class="sidebar__item-link">
+                                                    <i
+                                                        class="bx bx-cloud-download sidebar__item-icon"
+                                                    ></i>
+                                                    <span class="sidebar__item-label">
+                                                        Download
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar__item">
+                                                <a href="#!" class="sidebar__item-link">
+                                                    <i class="bx bxl-meta sidebar__item-icon"></i>
+                                                    <span class="sidebar__item-label">
+                                                        Follow us
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar__item">
+                                                <a href="#!" class="sidebar__item-link">
+                                                    <i class="bx bx-globe sidebar__item-icon"></i>
+                                                    <span class="sidebar__item-label">
+                                                        Languages
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar__item">
+                                                <a href="#!" class="sidebar__item-link">
+                                                    <i class="bx bx-support sidebar__item-icon"></i>
+                                                    <span class="sidebar__item-label">
+                                                        Support
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar__item">
+                                                <a href="#!" class="sidebar__item-link">
+                                                    <i class="bx bx-log-out sidebar__item-icon"></i>
+                                                    <span class="sidebar__item-label">
+                                                        Log out
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </section>
+                            </aside>
+                        </div>
+
+                        <a href="#" class="header-brand hide-tablet">
                             <svg viewBox="0 0 192 65" class="header-brand__icon">
                                 <g fill-rule="evenodd">
                                     <path
@@ -368,6 +475,7 @@
                             </svg>
                         </a>
 
+                        <input hidden type="checkbox" id="input-search-mobile" />
                         <form class="header-search">
                             <div class="header-search__form-group">
                                 <div class="header-search__form-control">
@@ -406,7 +514,7 @@
                                     </section>
                                 </div>
                                 <div class="header-search__filter">
-                                    <button class="header-search__filter-current">
+                                    <button type="button" class="header-search__filter-current">
                                         In this shop
                                         <i class="bx bx-chevron-down header-search__filter-icon">
                                         </i>
@@ -429,7 +537,7 @@
                                     <i class="bx bx-search"></i>
                                 </button>
                             </div>
-                            <div class="header-search__suggest">
+                            <div class="header-search__suggest hide-mobile">
                                 <a href="#!" class="header-search__suggest-link">Bộ cây máy tính</a>
                                 <a href="#!" class="header-search__suggest-link">Máy tính để bàn</a>
                                 <a href="#!" class="header-search__suggest-link">Máy tính bảng</a>
@@ -448,139 +556,150 @@
                             </div>
                         </form>
 
-                        <!-- Trong trường hợp cart trống add thêm class header-cart--empty -->
-                        <div class="header-cart">
-                            <div class="tooltip header-cart__tooltip">
-                                <a href="#!" class="header-cart__link">
-                                    <i class="bx bx-cart"></i>
-                                    <span class="header-cart__quantity">99</span>
-                                </a>
-                                <div class="tooltip__content">
-                                    <section class="header-cart__content">
-                                        <h2 class="header-cart__heading">
-                                            Recently Added Products
-                                        </h2>
-                                        <div class="header-cart__body">
-                                            <div class="header-cart__list">
-                                                <!-- Item 1 -->
-                                                <a href="#!" class="cart-item">
-                                                    <img
-                                                        src="./assets/img/cart-1.jpeg"
-                                                        alt="Bộ Bàn Phím Gaming có dây Kèm Chuột Máy
-                                                        Tính Con Báo Có LED 7 Màu Ấn Tượng"
-                                                        class="cart-item__thumb"
-                                                    />
-                                                    <div class="cart-item__content">
-                                                        <h3
-                                                            class="cart-item__title line-number line-clamp-1"
-                                                        >
-                                                            Bộ Bàn Phím Gaming có dây Kèm Chuột Máy
-                                                            Tính Con Báo Có LED 7 Màu Ấn Tượng
-                                                        </h3>
-                                                        <p class="cart-item__desc line-number">
-                                                            Sản phẩm cực hót trên thịt trường hiện
-                                                            nay
-                                                        </p>
-                                                    </div>
-                                                    <strong class="cart-item__price">
-                                                        đ127.710
-                                                    </strong>
-                                                </a>
-                                                <!-- Item 2 -->
-                                                <a href="#!" class="cart-item">
-                                                    <img
-                                                        src="./assets/img/cart-2.jpeg"
-                                                        alt="Cây máy tính để bàn DELL OPTIPLEX SFF, EX02."
-                                                        class="cart-item__thumb"
-                                                    />
-                                                    <div class="cart-item__content">
-                                                        <h3
-                                                            class="cart-item__title line-number line-clamp-1"
-                                                        >
-                                                            Cây máy tính để bàn DELL OPTIPLEX SFF,
-                                                            EX02.
-                                                        </h3>
-                                                        <p class="cart-item__desc line-number">
-                                                            Sản phẩm cực hót trên thịt trường hiện
-                                                            nay
-                                                        </p>
-                                                    </div>
-                                                    <strong class="cart-item__price">
-                                                        đ1.426.000
-                                                    </strong>
-                                                </a>
-                                                <!-- Item 3 -->
-                                                <a href="#!" class="cart-item">
-                                                    <img
-                                                        src="./assets/img/cart-3.jpeg"
-                                                        alt="Cây máy tính đồng bộ DELL CPU Core i7 3770 | i5 | i3 , ram 8GB, ổ cứng SSD 240GB. Tặng usb Wifi. Hàng Nhập Khẩu"
-                                                        class="cart-item__thumb"
-                                                    />
-                                                    <div class="cart-item__content">
-                                                        <h3
-                                                            class="cart-item__title line-number line-clamp-1"
-                                                        >
-                                                            Cây máy tính đồng bộ DELL CPU Core i7
-                                                            3770 | i5 | i3 , ram 8GB, ổ cứng SSD
-                                                            240GB. Tặng usb Wifi. Hàng Nhập Khẩu
-                                                        </h3>
-                                                        <p class="cart-item__desc line-number">
-                                                            Sản phẩm cực hót trên thịt trường hiện
-                                                            nay
-                                                        </p>
-                                                    </div>
-                                                    <strong class="cart-item__price">
-                                                        đ10.426.000
-                                                    </strong>
-                                                </a>
-                                                <!-- Item 4 -->
-                                                <a href="#!" class="cart-item">
-                                                    <img
-                                                        src="./assets/img/cart-4.jpeg"
-                                                        alt="Đồng hồ LED để bàn 3D thông minh báo thức TN828 Smart Clock"
-                                                        class="cart-item__thumb"
-                                                    />
-                                                    <div class="cart-item__content">
-                                                        <h3
-                                                            class="cart-item__title line-number line-clamp-1"
-                                                        >
-                                                            Đồng hồ LED để bàn 3D thông minh báo
-                                                            thức TN828 Smart Clock
-                                                        </h3>
-                                                        <p class="cart-item__desc line-number">
-                                                            Sản phẩm cực hót trên thịt trường hiện
-                                                            nay
-                                                        </p>
-                                                    </div>
-                                                    <strong class="cart-item__price">
-                                                        đ120.000
-                                                    </strong>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <footer class="header-cart__footer">
-                                            <p class="header-cart__footer-more">
-                                                2 More Products in Cart
-                                            </p>
-                                            <a href="#!" class="btn header-cart__footer-btn">
-                                                View My Shopping Cart
-                                            </a>
-                                        </footer>
-                                    </section>
+                        <div class="row">
+                            <!-- Search menu -->
+                            <div class="mobile-search">
+                                <label for="input-search-mobile" class="mobile-search__btn">
+                                    <i class="bx bx-search"></i>
+                                </label>
+                            </div>
 
-                                    <!-- Cart Empty -->
-                                    <section class="cart-placeholder">
-                                        <figure class="cart-placeholder__thumb">
-                                            <img
-                                                src="./assets/img/cart-empty.png"
-                                                alt=""
-                                                class="cart-placeholder__img"
-                                            />
-                                            <figcaption class="cart-placeholder__desc">
-                                                no products yet
-                                            </figcaption>
-                                        </figure>
-                                    </section>
+                            <!-- Trong trường hợp cart trống add thêm class header-cart--empty -->
+                            <div class="header-cart">
+                                <div class="tooltip header-cart__tooltip">
+                                    <a href="#!" class="header-cart__link">
+                                        <i class="bx bx-cart"></i>
+                                        <span class="header-cart__quantity">99</span>
+                                    </a>
+                                    <div class="tooltip__content tooltip__content--cart-mobile">
+                                        <section class="header-cart__content">
+                                            <h2 class="header-cart__heading">
+                                                Recently Added Products
+                                            </h2>
+                                            <div class="header-cart__body">
+                                                <div class="header-cart__list">
+                                                    <!-- Item 1 -->
+                                                    <a href="#!" class="cart-item">
+                                                        <img
+                                                            src="./assets/img/cart-1.jpeg"
+                                                            alt="Bộ Bàn Phím Gaming có dây Kèm Chuột Máy
+                                                        Tính Con Báo Có LED 7 Màu Ấn Tượng"
+                                                            class="cart-item__thumb"
+                                                        />
+                                                        <div class="cart-item__content">
+                                                            <h3
+                                                                class="cart-item__title line-number line-clamp-1"
+                                                            >
+                                                                Bộ Bàn Phím Gaming có dây Kèm Chuột
+                                                                Máy Tính Con Báo Có LED 7 Màu Ấn
+                                                                Tượng
+                                                            </h3>
+                                                            <p class="cart-item__desc line-number">
+                                                                Sản phẩm cực hót trên thịt trường
+                                                                hiện nay
+                                                            </p>
+                                                        </div>
+                                                        <strong class="cart-item__price">
+                                                            đ127.710
+                                                        </strong>
+                                                    </a>
+                                                    <!-- Item 2 -->
+                                                    <a href="#!" class="cart-item">
+                                                        <img
+                                                            src="./assets/img/cart-2.jpeg"
+                                                            alt="Cây máy tính để bàn DELL OPTIPLEX SFF, EX02."
+                                                            class="cart-item__thumb"
+                                                        />
+                                                        <div class="cart-item__content">
+                                                            <h3
+                                                                class="cart-item__title line-number line-clamp-1"
+                                                            >
+                                                                Cây máy tính để bàn DELL OPTIPLEX
+                                                                SFF, EX02.
+                                                            </h3>
+                                                            <p class="cart-item__desc line-number">
+                                                                Sản phẩm cực hót trên thịt trường
+                                                                hiện nay
+                                                            </p>
+                                                        </div>
+                                                        <strong class="cart-item__price">
+                                                            đ1.426.000
+                                                        </strong>
+                                                    </a>
+                                                    <!-- Item 3 -->
+                                                    <a href="#!" class="cart-item">
+                                                        <img
+                                                            src="./assets/img/cart-3.jpeg"
+                                                            alt="Cây máy tính đồng bộ DELL CPU Core i7 3770 | i5 | i3 , ram 8GB, ổ cứng SSD 240GB. Tặng usb Wifi. Hàng Nhập Khẩu"
+                                                            class="cart-item__thumb"
+                                                        />
+                                                        <div class="cart-item__content">
+                                                            <h3
+                                                                class="cart-item__title line-number line-clamp-1"
+                                                            >
+                                                                Cây máy tính đồng bộ DELL CPU Core
+                                                                i7 3770 | i5 | i3 , ram 8GB, ổ cứng
+                                                                SSD 240GB. Tặng usb Wifi. Hàng Nhập
+                                                                Khẩu
+                                                            </h3>
+                                                            <p class="cart-item__desc line-number">
+                                                                Sản phẩm cực hót trên thịt trường
+                                                                hiện nay
+                                                            </p>
+                                                        </div>
+                                                        <strong class="cart-item__price">
+                                                            đ10.426.000
+                                                        </strong>
+                                                    </a>
+                                                    <!-- Item 4 -->
+                                                    <a href="#!" class="cart-item">
+                                                        <img
+                                                            src="./assets/img/cart-4.jpeg"
+                                                            alt="Đồng hồ LED để bàn 3D thông minh báo thức TN828 Smart Clock"
+                                                            class="cart-item__thumb"
+                                                        />
+                                                        <div class="cart-item__content">
+                                                            <h3
+                                                                class="cart-item__title line-number line-clamp-1"
+                                                            >
+                                                                Đồng hồ LED để bàn 3D thông minh báo
+                                                                thức TN828 Smart Clock
+                                                            </h3>
+                                                            <p class="cart-item__desc line-number">
+                                                                Sản phẩm cực hót trên thịt trường
+                                                                hiện nay
+                                                            </p>
+                                                        </div>
+                                                        <strong class="cart-item__price">
+                                                            đ120.000
+                                                        </strong>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <footer class="header-cart__footer">
+                                                <p class="header-cart__footer-more">
+                                                    2 More Products in Cart
+                                                </p>
+                                                <a href="#!" class="btn header-cart__footer-btn">
+                                                    View My Shopping Cart
+                                                </a>
+                                            </footer>
+                                        </section>
+
+                                        <!-- Cart Empty -->
+                                        <section class="cart-placeholder">
+                                            <figure class="cart-placeholder__thumb">
+                                                <img
+                                                    src="./assets/img/cart-empty.png"
+                                                    alt=""
+                                                    class="cart-placeholder__img"
+                                                />
+                                                <figcaption class="cart-placeholder__desc">
+                                                    no products yet
+                                                </figcaption>
+                                            </figure>
+                                        </section>
+                                    </div>
                                 </div>
                             </div>
                         </div>

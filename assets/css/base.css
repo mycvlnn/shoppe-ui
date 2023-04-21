@@ -17,6 +17,7 @@
     --height-header: 119px;
     --height-navbar: 34px;
     --main-height-header: calc(var(--height-header) - var(--height-navbar));
+    --gap-mobile: 20px;
 }
 
 html {
