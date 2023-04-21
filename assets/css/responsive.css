@@ -54,6 +54,14 @@
     .sidebar__container {
         width: 400px;
     }
+
+    .banner {
+        margin-top: calc(var(--height-header) + 20px);
+    }
+
+    .banner__thumb {
+        height: 160px;
+    }
 }
 
 /* Mobile <= 739px */
@@ -147,5 +155,14 @@
 
     .header-cart__content {
         width: 100%;
+    }
+
+    .banner {
+        margin-top: calc(var(--height-header) + 20px);
+        padding: 0 var(--gap-mobile);
+    }
+
+    .banner__thumb {
+        height: 200px;
     }
 }
