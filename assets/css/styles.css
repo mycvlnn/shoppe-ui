@@ -948,10 +948,6 @@
     text-transform: capitalize;
 }
 
-main.main {
-    background-color: var(--main-bg-color);
-}
-
 /* Banner */
 
 .banner {
@@ -1095,4 +1091,101 @@ main.main {
 
 .home-category__item-text {
     text-transform: capitalize;
+}
+
+/* Home filter */
+
+.home-filter {
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 12px 20px;
+    border-radius: var(--base-radius);
+}
+
+.home-filter__row {
+    justify-content: space-between;
+}
+
+.home-filter__sort {
+    display: flex;
+}
+
+.home-filter__sort-label {
+    font-size: 1.4rem;
+    color: #555;
+    margin-right: 20px;
+    font-weight: 500;
+}
+
+.home-filter__sort-btn {
+    min-width: 200px;
+    position: relative;
+}
+
+.home-filter__sort-btn:hover .home-filter__dropdown {
+    visibility: visible;
+    opacity: 1;
+}
+
+.home-filter__sort-icon {
+    font-size: 1.8rem;
+    margin-left: auto;
+}
+
+.home-filter__dropdown {
+    border-top: 1px solid var(--main-bg-color);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background: #fff;
+    padding: 10px 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 1;
+}
+
+.home-filter__dropdown-item {
+    display: block;
+    text-align: left;
+    padding: 0 15px;
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+.home-filter__dropdown-item:hover {
+    color: var(--primary-color);
+}
+
+.home-filter__pagination-label {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.home-filter__pagination-curr {
+    color: var(--primary-color);
+}
+
+.home-filter__paging-btn {
+    line-height: 32px;
+    padding: 0 6px;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 2rem;
+    cursor: pointer;
+    background: transparent;
+}
+
+.home-filter__paging-btn--disabled {
+    background: #f9f9f9;
+    color: rgba(0, 0, 0, 0.26);
+    cursor: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.home-filter__paging-btn + .home-filter__paging-btn {
+    margin-left: 4px;
 }
