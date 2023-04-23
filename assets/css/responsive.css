@@ -238,4 +238,26 @@
         width: 34px;
         font-size: 1.8rem;
     }
+
+    /* Footer */
+    #footer {
+        padding-left: var(--gap-mobile);
+        padding-right: var(--gap-mobile);
+    }
+
+    .footer-section__heading {
+        text-align: center;
+    }
+
+    .footer-item__link {
+        justify-content: center;
+    }
+
+    .footer-section__images {
+        justify-content: center;
+    }
+
+    .footer-app {
+        justify-content: center;
+    }
 }
