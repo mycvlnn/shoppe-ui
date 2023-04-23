@@ -18,7 +18,7 @@
     --height-header: 119px;
     --height-navbar: 34px;
     --main-height-header: calc(var(--height-header) - var(--height-navbar));
-    --gap-mobile: 20px;
+    --gap-mobile: 10px;
     --base-radius: 2px;
 }
 
@@ -126,6 +126,7 @@ a {
     outline: none;
     white-space: nowrap;
     border-radius: 2px;
+    transition: 0.3s;
 }
 
 .btn.primary {
