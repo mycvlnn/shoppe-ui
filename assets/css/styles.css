@@ -959,6 +959,26 @@
     column-gap: 6px;
 }
 
+.banner__dots {
+    position: absolute;
+    margin-top: 6px;
+    gap: 4px;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+}
+
+.banner__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #fff;
+}
+
+.banner__dot--active {
+    background-color: var(--primary-color);
+}
+
 .banner__thumb {
     height: 235px;
     display: block;

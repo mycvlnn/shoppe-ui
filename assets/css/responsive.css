@@ -180,6 +180,22 @@
         height: 200px;
     }
 
+    .banner__dot {
+        background-color: #ccc;
+    }
+
+    .banner__dot--active {
+        background-color: var(--primary-color);
+    }
+
+    .banner__dots {
+        top: 100%;
+        bottom: unset;
+        left: unset;
+        transform: unset;
+        right: 0;
+    }
+
     .home-filter {
         padding: 12px var(--gap-mobile);
     }
