@@ -231,4 +231,11 @@
     .home-category__list--mobile {
         padding: 0 var(--gap-mobile);
     }
+
+    /* Pagination */
+    .home-paging__number {
+        margin: 0;
+        width: 34px;
+        font-size: 1.8rem;
+    }
 }
