@@ -13,11 +13,13 @@
     --bg-color-notify: #fff2ee;
     --bg-hover-notify: #f8f8f8;
     --primary-gradient: linear-gradient(#ee4d2d, #ff7337);
+    --main-bg-color: #f6f6f6;
     --width-container: 1200px;
     --height-header: 119px;
     --height-navbar: 34px;
     --main-height-header: calc(var(--height-header) - var(--height-navbar));
-    --gap-mobile: 20px;
+    --gap-mobile: 10px;
+    --base-radius: 2px;
 }
 
 html {
@@ -27,6 +29,7 @@ html {
 body {
     font-size: 1.6rem;
     font-family: Montserrat, sans-serif;
+    background-color: var(--main-bg-color);
 }
 
 input,
@@ -114,8 +117,8 @@ a {
     padding: 0 15px;
     line-height: 34px;
     cursor: pointer;
-    color: #fff;
-    background-color: var(--primary-color);
+    color: var(--text-color);
+    background-color: #fff;
     font-size: 1.4rem;
     user-select: none;
     font-weight: 500;
@@ -123,4 +126,19 @@ a {
     outline: none;
     white-space: nowrap;
     border-radius: 2px;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.btn + .btn {
+    margin-left: 15px;
+}
+
+.row-center {
+    display: flex;
+    align-items: center;
 }
