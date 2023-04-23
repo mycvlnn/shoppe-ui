@@ -1575,3 +1575,23 @@
     font-weight: 500;
     color: rgba(0, 0, 0, 0.54);
 }
+
+/* Scroll to top */
+#scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    width: 43px;
+    height: 43px;
+    background-color: #fff;
+    color: var(--primary-color);
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 100%;
+    animation: fadeIn linear 0.3s;
+}

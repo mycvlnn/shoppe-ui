@@ -1925,6 +1925,30 @@
                     <div class="footer-copyright">© 2023 Shopee. All Rights Reserved.</div>
                 </div>
             </footer>
+            <!-- ====================== Scroll to top ====================== -->
+            <button id="scroll-to-top">
+                <i class="bx bxs-arrow-to-top"></i>
+            </button>
         </div>
+        <script>
+            const btnScrollToTop = document.getElementById("scroll-to-top");
+            btnScrollToTop.onclick = function () {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            };
+
+            // Sự kiện cuộn trang
+            let prevScrollpos = window.pageYOffset;
+            window.onscroll = function () {
+                console.log("renn");
+                let currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    btnScrollToTop.style.display = "flex";
+                } else {
+                    btnScrollToTop.style.display = "none";
+                }
+                prevScrollpos = currentScrollPos;
+            };
+        </script>
     </body>
 </html>
